@@ -3,11 +3,52 @@
   <head>
     <meta charset="utf-8" />
     <title>Checklist Constructions</title>
+    <style>
+      body {
+      font-family: sans-serif;
+      }
+    </style>
   </head>
   <body>
     <h1>Rapport de la ronde de contrôle</h1>
-    <form>
+    <form method="post" action="/api/ConfirmConstruction" enctype="multipart/form-data">
       <p>Abri <input name="Construction" /></p>
+
+
+      <h2>État général de l'abri</h2>
+      <table>
+	<thead>
+	  <tr>
+	    <th></th>
+	    <th>en ordre</th>
+	    <th>à réparer</th>
+	    <th>photo</th>
+	    <th>remarques</th>
+	  </tr>
+	</thead>
+	<tbody>
+	  <tr>
+	    <td>Éclairage (Chang. Ampoules et Néons)</td>
+	    <td><input type="radio" name="Eclairage" value="OK" /></td>
+	    <td><input type="radio" name="Eclairage" value="ToRepair" /></td>
+	    <td><input type="file" name="PhotoEclairage" capture="user" accept="image/*" /></td>
+	    <td>
+	      <textarea name="CommentsEclairage"></textarea>
+	    </td>
+	  </tr>
+	  <tr>
+	    <td>Hygrométrie + Température</td>
+	    <td><input type="radio" name="Hygrometrie" value="OK" /></td>
+	    <td><input type="radio" name="Hygrometrie" value="ToRepair" /></td>
+	    <td><input type="file" name="PhotoHygrometrie" capture="user" accept="image/*" /></td>
+	    <td>
+	      <textarea name="CommentsHygrometrie"></textarea>
+	    </td>
+	  </tr>
+	</tbody>
+      </table>
+
+      <button type="submit">Envoyer</button>
     </form>
   </body>
 </html>
