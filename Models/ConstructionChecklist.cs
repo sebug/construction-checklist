@@ -14,5 +14,7 @@ namespace construction_checklist.Models
         public string Hygrometrie { get; set; }
         public IFormFile PhotoHygrometrie { get; set; }
         public string CommentsHygrometrie { get; set; }
+
+        public string Email { get; set; }
     }
 }

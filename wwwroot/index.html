@@ -12,7 +12,7 @@
   <body>
     <h1>Rapport de la ronde de contrôle</h1>
     <form method="post" action="/api/ConfirmConstruction" enctype="multipart/form-data">
-      <p>Abri <input name="Construction" /></p>
+      <p>Abri <input name="Construction" required /></p>
 
 
       <h2>État général de l'abri</h2>
@@ -47,6 +47,8 @@
 	  </tr>
 	</tbody>
       </table>
+
+      <p><label>E-Mail: <input type="email" name="Email" /></label></p>
 
       <button type="submit">Envoyer</button>
     </form>
