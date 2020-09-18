@@ -5,4 +5,7 @@
     <RootNamespace>construction_checklist</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\" />
+  </ItemGroup>
 </Project>
